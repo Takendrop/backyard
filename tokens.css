@@ -1,0 +1,75 @@
+/* ============================================================
+   BACKYARD — Design Tokens
+   Single source of truth. Edit here, everything updates.
+   ============================================================ */
+
+:root {
+
+  /* --- Colours --- */
+  --bg:          #0E1214;  /* nocne niebo — główne tło */
+  --surface:     #151A1E;  /* karty, sekcje */
+  --elevated:    #1C2228;  /* hover states, wyróżnienia */
+  --border:      #262E36;  /* linie, separatory */
+
+  --text:        #D8E0E8;  /* tekst główny */
+  --text-muted:  #7A8C9C;  /* opisy, meta, daty */
+  --text-dim:    #6E8294;  /* daty, meta drugiego rzędu, placeholdery */
+  --white:       #E8EEF4;  /* nagłówki, logo, emphasis */
+
+  --amber:       #C8943A;  /* golden hour, latarnie — główny akcent */
+  --teal:        #4A9A8A;  /* park, woda — Psychologia, Free */
+  --terracotta:  #B06A88;  /* Stare Miasto, cegła — Jedzenie */
+  --steel:       #5A8AB0;  /* szklane wieżowce, niebo — Gry */
+
+  /* Tag alpha layers (derived from accents) */
+  --amber-bg:        rgba(200, 148, 58,  0.10);
+  --amber-border:    rgba(200, 148, 58,  0.28);
+  --teal-bg:         rgba( 74, 154, 138, 0.10);
+  --teal-border:     rgba( 74, 154, 138, 0.28);
+  --terracotta-bg:   rgba(176, 106, 136, 0.10);
+  --terracotta-border: rgba(176, 106, 136, 0.28);
+  --steel-bg:        rgba( 90, 138, 176, 0.10);
+  --steel-border:    rgba( 90, 138, 176, 0.28);
+
+  /* --- Typography --- */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-mono:  'DM Mono', 'Courier New', monospace;
+
+  --fs-xs:   0.70rem;   /* 11px — labels, tags, nav */
+  --fs-sm:   0.85rem;   /* 14px — captions, excerpts */
+  --fs-base: 1.00rem;   /* 16px — body */
+  --fs-h3:   1.30rem;   /* 21px — card titles */
+  --fs-h2:   clamp(1.8rem, 3vw, 2.8rem);
+  --fs-h1:   clamp(3.0rem, 6vw, 5.5rem);
+
+  --lh-tight:  1.10;
+  --lh-snug:   1.35;
+  --lh-base:   1.75;
+
+  --ls-wide:   0.12em;
+  --ls-wider:  0.20em;
+  --ls-label:  0.10em;
+
+  /* --- Spacing --- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  16px;
+  --sp-4:  24px;
+  --sp-5:  48px;
+  --sp-6:  80px;
+
+  /* --- Layout --- */
+  --max-w:        1100px;
+  --max-w-text:   65ch;
+  --nav-h:        56px;
+  --article-w:    720px;
+
+  /* --- Borders & Radius --- */
+  --radius:  2px;   /* max we use — brutalist rule */
+  --bw:      1px;   /* standard border width */
+
+  /* --- Transitions --- */
+  --t-fast:  0.15s ease;
+  --t-base:  0.20s ease;
+}

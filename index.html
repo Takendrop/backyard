@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backyard — Off the beaten path</title>
+  <meta name="description" content="Backyard — warszawski blog o miejscach, kulturze i ludziach z dala od utartych szlaków.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon-32.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="nav__brand">Backyard</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link" aria-current="page">Główna</a></li>
+        <li><a href="#kultura" class="nav__link">Kultura</a></li>
+        <li><a href="#psychologia" class="nav__link">Psychologia</a></li>
+        <li><a href="#jedzenie" class="nav__link">Jedzenie</a></li>
+        <li><a href="#gry" class="nav__link">Gry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero">
+      <div class="hero__img">
+        <img src="assets/images/ui/cover.jpg" alt="Warszawa nocą">
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__bg-letter" aria-hidden="true">B</div>
+      <div class="hero__inner container">
+        <p class="hero__tag">Warszawa · Off the beaten path</p>
+        <h1 class="hero__title">Backyard<br><em>Warsaw</em></h1>
+        <p class="hero__sub">Miejsca, ludzie i rzeczy, których nie znajdziesz w guidebooku.</p>
+        <div class="hero__cta">
+          <a href="#latest" class="btn btn--primary">Najnowsze posty</a>
+          <a href="#categories" class="btn btn--outline">Kategorie</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURED POST (wide card)
+    ============================================================ -->
+    <section class="section-featured container" id="latest">
+      <div class="section-label">Wyróżniony post</div>
+      <a href="posts/nocna-warszawa.html" class="card card--featured">
+        <div class="card__img card__img--featured">
+          <img src="assets/images/ui/cover.jpg" alt="Warszawa nocą">
+        </div>
+        <div class="card__body">
+          <div class="card__tags">
+            <span class="tag tag--culture">Kultura</span>
+            <span class="tag tag--free">Free</span>
+          </div>
+          <h2 class="card--featured__title">Praga Północ — dzielnica, która żyje nocą</h2>
+          <p class="card__excerpt">Nie musisz wydawać fortuny, żeby zobaczyć coś prawdziwego. Wystarczy wiedzieć gdzie patrzeć — i iść tam, gdzie nikt z biura nie chodzi w piątek.</p>
+          <footer class="card__meta">Feb 16 2026 · 7 min czytania · Praga Północ</footer>
+        </div>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         LATEST POSTS GRID
+    ============================================================ -->
+    <section class="section-posts container">
+      <div class="section-label">Ostatnio dodane</div>
+      <h2 class="section-title">Najnowsze</h2>
+
+      <div class="posts-grid">
+
+        <a href="posts/nocna-warszawa.html" class="card">
+          <div class="card__img">
+            <span class="card__img-placeholder" aria-hidden="true">Ś</span>
+          </div>
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag tag--food">Jedzenie</span>
+              <span class="tag tag--price">€€</span>
+            </div>
+            <h3 class="card__title">Śródmieście: miejsca bez kolejki i bez hype'u</h3>
+            <p class="card__excerpt">Sprawdzone, bez marketingowego tonu, własne doświadczenia — nie guidebook.</p>
+            <footer class="card__meta">Feb 14 2026 · 3 min</footer>
+          </div>
+        </a>
+
+        <a href="posts/nocna-warszawa.html" class="card">
+          <div class="card__img">
+            <span class="card__img-placeholder" aria-hidden="true">W</span>
+          </div>
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag tag--psych">Psychologia</span>
+              <span class="tag tag--free">Free</span>
+            </div>
+            <h3 class="card__title">Dlaczego wracamy w te same miejsca</h3>
+            <p class="card__excerpt">Rutyna daje spokój. Ale to nie tłumaczy, dlaczego pewne miejsca wciągają jak sidła.</p>
+            <footer class="card__meta">Feb 10 2026 · 5 min</footer>
+          </div>
+        </a>
+
+        <a href="posts/nocna-warszawa.html" class="card">
+          <div class="card__img">
+            <span class="card__img-placeholder" aria-hidden="true">G</span>
+          </div>
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag tag--games">Gry</span>
+            </div>
+            <h3 class="card__title">Kawiarnie z konsolami — powrót do lat 90.</h3>
+            <p class="card__excerpt">Nostalgia w cenie kawy. Mało oczekiwałem, wyszedłem późno.</p>
+            <footer class="card__meta">Feb 6 2026 · 4 min</footer>
+          </div>
+        </a>
+
+        <a href="posts/nocna-warszawa.html" class="card">
+          <div class="card__img">
+            <span class="card__img-placeholder" aria-hidden="true">M</span>
+          </div>
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag tag--culture">Kultura</span>
+            </div>
+            <h3 class="card__title">Murale Woli, których nie ma w żadnym przewodniku</h3>
+            <p class="card__excerpt">Wola to teraz hipsterskie hasło. Ale ściany pamiętają więcej niż nowi mieszkańcy.</p>
+            <footer class="card__meta">Feb 2 2026 · 6 min</footer>
+          </div>
+        </a>
+
+        <a href="posts/nocna-warszawa.html" class="card">
+          <div class="card__img">
+            <span class="card__img-placeholder" aria-hidden="true">R</span>
+          </div>
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag tag--food">Jedzenie</span>
+              <span class="tag tag--price">€</span>
+            </div>
+            <h3 class="card__title">Rynek Starego Miasta bez turystycznej pułapki</h3>
+            <p class="card__excerpt">Jedna restauracja, do której wróciłem trzy razy. Kryteria: smak, brak Instagram-dekoracji, obsługa.</p>
+            <footer class="card__meta">Jan 28 2026 · 4 min</footer>
+          </div>
+        </a>
+
+        <a href="posts/nocna-warszawa.html" class="card">
+          <div class="card__img">
+            <span class="card__img-placeholder" aria-hidden="true">Z</span>
+          </div>
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag tag--psych">Psychologia</span>
+            </div>
+            <h3 class="card__title">Zbłądzić celowo — o wartości nieefektywnych tras</h3>
+            <p class="card__excerpt">Skróty są dobre. Ale długa droga przez dzielnicę, którą omijałeś, ma swoje własne tempo.</p>
+            <footer class="card__meta">Jan 22 2026 · 5 min</footer>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="posts-more">
+        <a href="#" class="btn btn--outline">Wszystkie posty</a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CATEGORIES
+    ============================================================ -->
+    <section class="section-categories container" id="categories">
+      <div class="section-label">Przeglądaj</div>
+      <h2 class="section-title">Kategorie</h2>
+      <div class="categories-grid">
+        <a href="#kultura" class="category-card category-card--culture">
+          <span class="category-card__label">Kultura</span>
+          <span class="category-card__count">12 postów</span>
+        </a>
+        <a href="#jedzenie" class="category-card category-card--food">
+          <span class="category-card__label">Jedzenie</span>
+          <span class="category-card__count">8 postów</span>
+        </a>
+        <a href="#psychologia" class="category-card category-card--psych">
+          <span class="category-card__label">Psychologia</span>
+          <span class="category-card__count">5 postów</span>
+        </a>
+        <a href="#gry" class="category-card category-card--games">
+          <span class="category-card__label">Gry</span>
+          <span class="category-card__count">4 posty</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         QUOTE INTERLUDE
+    ============================================================ -->
+    <section class="section-quote container">
+      <blockquote class="blockquote blockquote--large">
+        "Warszawa nie wygląda jak nic z zewnątrz.<br>
+        Ale jak już wejdziesz — nie chcesz wychodzić."
+      </blockquote>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <a href="index.html" class="footer__brand">Backyard</a>
+    <ul class="footer__links">
+      <li><a href="#" class="footer__link">O nas</a></li>
+      <li><a href="#" class="footer__link">Kontakt</a></li>
+      <li><a href="#" class="footer__link">Instagram</a></li>
+    </ul>
+    <p class="footer__copy">© 2026 · Off the beaten path · Warsaw</p>
+  </footer>
+
+</body>
+</html>

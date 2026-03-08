@@ -1,0 +1,408 @@
+/* ============================================================
+   BACKYARD — Base Styles & Shared Components
+   Import after tokens.css
+   ============================================================ */
+
+/* --- Reset --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Root --- */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: var(--bg);
+  border-bottom: var(--bw) solid var(--border);
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__brand {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--white);
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav__link {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--t-base);
+}
+
+.nav__link:hover,
+.nav__link[aria-current="page"] {
+  color: var(--amber);
+}
+
+/* ============================================================
+   TAGS
+   ============================================================ */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  line-height: 1;
+}
+
+.tag--culture {
+  background: var(--amber-bg);
+  color: var(--amber);
+  border: var(--bw) solid var(--amber-border);
+}
+.tag--food {
+  background: var(--terracotta-bg);
+  color: var(--terracotta);
+  border: var(--bw) solid var(--terracotta-border);
+}
+.tag--psych {
+  background: var(--teal-bg);
+  color: var(--teal);
+  border: var(--bw) solid var(--teal-border);
+}
+.tag--games {
+  background: var(--steel-bg);
+  color: var(--steel);
+  border: var(--bw) solid var(--steel-border);
+}
+.tag--free {
+  background: transparent;
+  color: var(--teal);
+  border: var(--bw) solid var(--teal-border);
+}
+.tag--price {
+  background: transparent;
+  color: var(--text-muted);
+  border: var(--bw) solid var(--border);
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  transition: all var(--t-base);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn--primary {
+  background: var(--amber);
+  color: var(--bg);
+}
+.btn--primary:hover {
+  background: var(--white);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--text);
+  border: var(--bw) solid var(--border);
+}
+.btn--outline:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  padding-left: 0;
+}
+.btn--ghost:hover {
+  color: var(--amber);
+}
+
+/* ============================================================
+   SECTION LABEL (overline)
+   ============================================================ */
+.section-label {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.card {
+  background: var(--surface);
+  border: var(--bw) solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--t-base);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  border-color: var(--amber);
+}
+
+.card__img {
+  height: 200px;
+  background: var(--elevated);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card__img img {
+  transform: scale(1.03);
+}
+
+/* Placeholder letter when no image */
+.card__img-placeholder {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-style: italic;
+  color: var(--border);
+  user-select: none;
+}
+
+.card__body {
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card__tags {
+  display: flex;
+  gap: var(--sp-1);
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.card__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--white);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--sp-2);
+  transition: color var(--t-base);
+}
+
+.card:hover .card__title {
+  color: var(--amber);
+}
+
+.card__excerpt {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: auto;
+  padding-bottom: var(--sp-4);
+}
+
+.card__meta {
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  padding-top: var(--sp-3);
+  border-top: var(--bw) solid var(--border);
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: var(--bw);
+  background: var(--border);
+}
+.divider span {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.20em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   BLOCKQUOTE
+   ============================================================ */
+.blockquote {
+  border-left: 2px solid var(--amber);
+  padding: 0.75rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: var(--lh-base);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  border-top: var(--bw) solid var(--border);
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: var(--ls-wider);
+  font-size: 0.9rem;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__copy {
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer__link {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--t-base);
+}
+
+.footer__link:hover {
+  color: var(--amber);
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.container {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 3rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+  .nav {
+    padding: 0 1.5rem;
+    gap: 1rem;
+  }
+  .nav__links {
+    display: none; /* mobile nav handled per-page if needed */
+  }
+  .footer {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
