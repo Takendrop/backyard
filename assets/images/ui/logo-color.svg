@@ -1,0 +1,17 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gateway Icon -->
+  <g id="gateway-icon">
+    <!-- Gate frame -->
+    <rect x="10" y="20" width="60" height="60" rx="4" stroke="#C8943A" stroke-width="3" fill="none"/>
+    <!-- Gate door -->
+    <line x1="40" y1="25" x2="40" y2="75" stroke="#C8943A" stroke-width="2"/>
+    <!-- Door handle -->
+    <circle cx="45" cy="50" r="2" fill="#C8943A"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="85" y="58" font-family="Inter, sans-serif" font-size="32" font-weight="600" fill="#E8EEF4">BACKYARD</text>
+  
+  <!-- Tagline -->
+  <text x="85" y="75" font-family="Inter, sans-serif" font-size="11" font-weight="400" fill="#7A8C9C">Off the beaten path</text>
+</svg>
